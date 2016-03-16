@@ -2,7 +2,7 @@ feature 'attack player 2' do
   scenario 'show confirmation' do
     sign_in_and_play
     click_button 'Attack'
-    expect(page).to have_content 'Bob attacked Jim'
+    expect(page).to have_content 'Jim attacked by Bob'
   end
 
   scenario 'show reduced hit points' do
