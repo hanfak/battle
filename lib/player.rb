@@ -1,5 +1,5 @@
 class Player
-  attr_reader :name, :hit_points
+  attr_reader :name, :hit_points, :dead
 
   DEFAULT_HP = 100
   DEFAULT_ATTACK = 20
@@ -7,10 +7,11 @@ class Player
   def initialize(name, hit_points = DEFAULT_HP)
     @name = name
     @hit_points = hit_points
+    @dead =false
   end
 
   def damage
-    reduce_hit_points_by(DEFAULT_ATTACK)
+    @dead = true if reduce_hit_points_by(DEFAULT_ATTACK) <= 0
   end
 
   private

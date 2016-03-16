@@ -22,7 +22,6 @@ class Battle < Sinatra::Base
   get '/attack' do
     @game = $game
     @game.attack(@game.passive)
-    p "#{@game.passive.name} vs #{@game.active.name}"
     @game.switch_player(@game.active, @game.passive)
     erb :attack
   end

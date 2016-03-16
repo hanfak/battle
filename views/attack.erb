@@ -1,3 +1,9 @@
 <%= @game.active.name %> attacked by <%= @game.passive.name %>
-
-<a href='/play'>Go back</a>
+<% unless @game.passive.dead %>
+  <a href='/play'>Go back</a>
+<% end %>
+<%= @game.passive.dead.to_s %>
+<% if @game.passive.dead %>
+  and <%= @game.active.name %> Died!
+  <a href='/'>Fight again?</a>
+<% end %>

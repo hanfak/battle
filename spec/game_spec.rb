@@ -29,7 +29,14 @@ describe Game do
       expect(player2).to receive(:damage)
       game.attack(player2)
     end
+
+
   end
+  describe
+  it 'passive loses' do
+
+  end
+
 
   describe '#switch_player' do
     it 'switches the active and passive players' do

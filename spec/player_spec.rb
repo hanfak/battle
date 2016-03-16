@@ -20,5 +20,12 @@ describe Player do
     it 'reduces hit points' do
       expect {player_2.damage}.to change {player_2.hit_points}.by -20
     end
+    it 'is dead' do
+      5.times do
+        player_2.damage
+      end
+      expect(player_2.dead).to eq true
+    end
+
   end
 end

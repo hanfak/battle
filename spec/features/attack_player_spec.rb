@@ -11,4 +11,15 @@ feature 'attack player 2' do
     click_link 'Go back'
     expect(page).to have_content 'Jim: 80 HP'
   end
+
+  scenario 'show player is dead' do
+    sign_in_and_play
+    9.times do
+      click_button 'Attack'
+      click_link 'Go back'
+    end
+    expect(page).to have_content 'and Jim Died!'
+    expect(page).not_to have_content 'Go back'
+    expect(page).to have_content 'Fight again?'
+  end
 end
