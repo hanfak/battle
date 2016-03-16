@@ -9,10 +9,6 @@ class Player
     @hit_points = hit_points
   end
 
-  def attack(player)
-    player.damage
-  end
-
   def damage
     reduce_hit_points_by(DEFAULT_ATTACK)
   end
