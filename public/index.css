@@ -1,0 +1,21 @@
+body {
+  font-size: 40px;
+  background-image: url("https://twistedsifter.files.wordpress.com/2013/05/animated-gifs-of-fighting-game-backgrounds-10.gif?w=1600&h=734");
+  background-repeat:no-repeat;
+
+ background-size:cover;
+
+
+}
+
+input {
+  background-color: #4CAF50;
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+}

@@ -23,7 +23,8 @@ class Battle < Sinatra::Base
     @game = $game
     @game.attack(@game.passive)
     @game.switch_player(@game.active, @game.passive)
-    erb :attack
+    # erb :attack
+    redirect '/play'
   end
 
   run! if app_file == $PROGRAM_NAME
