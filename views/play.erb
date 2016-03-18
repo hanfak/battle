@@ -9,7 +9,7 @@
   <h2><%= @game.active.name %>: <%= @game.active.hit_points %> HP</h2>
   <h2><%= @game.passive.name %>: <%= @game.passive.hit_points %> HP</h2>
 
-  <form action="/attack">
+  <form id='button' action="/attack">
     <input type="submit" value="Attack">
   </form>
 <% end %>
