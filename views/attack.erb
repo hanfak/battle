@@ -1,4 +1,5 @@
 <link rel="stylesheet" type="text/css" href="/attack.css">
+
 <%= @game.active.name %> attacked by <%= @game.passive.name %>
 <% unless @game.passive.dead %>
   <a href='/play'>Go back</a>
@@ -6,5 +7,8 @@
 <%= @game.passive.dead.to_s %>
 <% if @game.passive.dead %>
   and <%= @game.active.name %> Died!
+  <img src="http://media.vanityfair.com/photos/54bfbe55023a8bfc4cad2b80/master/w_690,c_limit/got-s5-2.gif" width="304px" height="228px">
   <a href='/'>Fight again?</a>
+  <br>
+  <img src="http://media.vanityfair.com/photos/54bfbe55023a8bfc4cad2b80/master/w_690,c_limit/got-s5-2.gif" width="304px" height="228px">
 <% end %>
